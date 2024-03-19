@@ -6,7 +6,7 @@ const userChoice = prompt("Choose rock, paper, scissors:");
 if(userChoice) {
     console.log(`${userName} choose: ${userChoice}`);  
 } else {
-    console.log(`${userName} is cheated!!`);  // when userChoice is empty!
+    console.log(`${userName} is cheated!!`);  // when userChoice is empty
 }
 
 const randomNumber = Math.floor(Math.random() * 3);
@@ -18,23 +18,17 @@ if (userChoice === computerChoice) {
 } else if (userChoice === "rock") {
     if (computerChoice === "scissors") {
         console.log(`${userName} is winner!`);
-    } else if (computerChoice === "paper") {
-        console.log(`${userName} is loser!`);
     } else {
-        console.log("It's a tie!!");
-    }
+        console.log(`${userName} is loser!`);
+    } 
 } else if (userChoice === "paper") {
     if (computerChoice === rock) {
         console.log(`${userName} is winner!`);
-    } else if (computerChoice === paper) {
-        console.log("It's a tie!!");
     } else {
         console.log(`${userName} is loser!`);
     }
 } else {
-    if (computerChoice === "scissors") {
-        console.log("It's a tie!!");
-    } else if (computerChoice === "rock") {
+    if (computerChoice === "rock") {  
         console.log(`${userName} is loser!`);
     } else {
         console.log(`${userName} is winner!`);
